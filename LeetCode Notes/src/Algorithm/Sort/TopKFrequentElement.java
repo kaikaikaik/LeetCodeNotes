@@ -20,11 +20,11 @@ import java.util.*;
 //You can return the answer in any order.
 
 public class TopKFrequentElement {
-//    public static void main(String[] args) {
-//        Solution sol = new Solution();
-//        int[] nums = new int[]{2,2,2,2,3,3,4,4,4};
-//        System.out.println(sol.topKFrequent(nums,2));
-//    }
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        int[] nums = new int[]{2,2,2,2,3,3,4,4,4};
+        System.out.println(sol.topKFrequent(nums,2));
+    }
 }
 
 class Solution{
