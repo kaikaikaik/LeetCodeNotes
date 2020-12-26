@@ -3,7 +3,7 @@ package Algorithm.Sort;
 import java.util.Scanner;
 
 public class encoding{
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         char[] form = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
                 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0'
                 , '1', '2', '3', '4', '5', '6', '7', '8', '9'};
@@ -11,14 +11,14 @@ public class encoding{
         System.out.println("请输入待加密的明文：");
         String MingWen = sc.nextLine();
         MingWen=MingWen.toUpperCase();//将输入的明文全部大写
-        final int K1 = 3;
-        final int K2 = 4;
-        final int K3 = 31;
+        final int K1 = 7;
+        final int K2 = 3;
+        final int K3 = 26;
         int [] cipherNum=new int[MingWen.length()];//用来存储数字化的密文
         encryption(MingWen,form,K1,K2,cipherNum);
         decryption(form,MingWen,K2,K3,cipherNum);
 
-    }*/
+    }
     public static void encryption(String MingWen,char[] form,int K1,int K2,int[] cipherNum){
         //第一步：将明文存入数组
         char[] pla=new char[MingWen.length()];
@@ -49,7 +49,7 @@ public class encoding{
     public static void decryption(char[] form,String Mingwen,int K2,int K3,int[] cipherNum){
         char[] JieMI=new char[Mingwen.length()];
         for (int i =0;i<Mingwen.length();i++){
-            JieMI[i]=form[Math.floorMod(K3*(cipherNum[i]-K2),36)];
+            JieMI[i]=form[Math.floorMod(K3*(cipherNum[i]-K2),26)];
         }
         System.out.println("解密结果是：");
         System.out.println(JieMI);

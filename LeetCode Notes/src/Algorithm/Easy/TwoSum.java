@@ -1,15 +1,10 @@
-package Algorithm.DoublePointer;
+package Algorithm.Easy;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class TwoSum {
-    public static void main(String[] args) {
 
-    }
-}
-
-class TwoSumSolution{
+class Solution{
     //map解法，主要使用map中的containsKey方法
     public int[] twoSum(int[] nums,int target){
         Map<Integer,Integer> hashTable = new HashMap<Integer, Integer>();
